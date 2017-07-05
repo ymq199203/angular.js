@@ -62,6 +62,8 @@ jobs:
           detect_encoding: true # detects gzip compression and sets the correct metadata in gcs
           on:
             repo: angular/angular.js
+            branch: chore-firebase
+            # condition: $TRAVIS_TAG != false || ($TRAVIS_PR == false && $TRAVIS_BRANCH = master) || $TRAVIS_BRANCH = chore-firebase
         - provider: firebase
           skip_cleanup: true
           project: google.com:angular-sites
@@ -69,4 +71,6 @@ jobs:
             secure: tHIFdSq55qkyZf9zT/3+VkhUrTvOTMuswxXU3KyWaBrSieZqG0UnUDyNm+n3lSfX95zEl/+rJAWbfvhVSxZi13ndOtvRF+MdI1cvow2JynP0aDSiPffEvVrZOmihD6mt2SlMfhskr5FTduQ69kZG6DfLcve1PPDaIwnbOv3phb8=
           on:
             repo: angular/angular.js
+            # condition: $TRAVIS_BRANCH = chore-firebase
+            branch: chore-firebase
 
